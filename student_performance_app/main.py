@@ -1,8 +1,10 @@
 import streamlit as st
 import polars as pl
 from pathlib import Path
+import sys
 
-
+if '~/students-performance/' not in sys.path:
+    sys.path.append('~/students-performance')
 st.set_page_config(page_title='Student Performance App', page_icon='👋')
 
 st.write("# Welcome to Student Performance App! 👋")
@@ -15,7 +17,7 @@ st.markdown(
 """
 )
 
-DATA_PATH = 'static/StudentPerformanceFactors.csv'
+DATA_PATH = 'data/StudentPerformanceFactors.csv'
 
 file_path = Path(DATA_PATH)
 if not file_path.exists():
