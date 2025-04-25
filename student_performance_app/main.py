@@ -15,7 +15,7 @@ st.markdown(
 """
 )
 
-DATA_PATH = 'data/StudentPerformanceFactors.csv'
+DATA_PATH = '../data/StudentPerformanceFactors.csv'
 
 file_path = Path(DATA_PATH)
 if not file_path.exists():
