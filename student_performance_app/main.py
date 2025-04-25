@@ -3,10 +3,7 @@ import polars as pl
 from pathlib import Path
 
 
-st.set_page_config(
-    page_title='Student Performance App',
-    page_icon='👋',
-)
+st.set_page_config(page_title='Student Performance App', page_icon='👋')
 
 st.write("# Welcome to Student Performance App! 👋")
 
