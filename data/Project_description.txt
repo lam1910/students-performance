@@ -1,0 +1,6 @@
+The dataset: StudentsPerformance Factor
+1 Load a file and show me the 5 firtst elements
+2 Exploratory dataset, the most important about numerical and categorical variables to understand how the students grades are distributed with 
+respect to other numerical and categorical variable. We want an insteractive dashbord
+3 Streamlit local deployement
+4 deploy application on EC2 and make it availbale online and for anaybody. You will define also a Auto scalling group and a custom vpc fot this
