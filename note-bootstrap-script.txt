@@ -1,0 +1,17 @@
+sudo yum update
+sudo yum install git -y
+git clone https://github.com/lam1910/students-performance.git ; cd students-performance
+python3 -m venv venv ; source venv/bin/activate
+pip install -r requirements.txt --no-cache-dir
+sudo nano /etc/systemd/system/stperf.service
+sudo systemctl daemon-reload
+sudo systemctl start stperf
+sudo systemctl enable stperf
+sudo yum install nginx -y
+sudo systemctl start nginx
+sudo systemctl enable nginx
+sudo mkdir -p /etc/nginx/sites-available
+sudo nano /etc/nginx/sites-available/default
+sudo yum install iptables-services -y
+sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8501
+sudo systemctl restart nginx
