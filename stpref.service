@@ -1,0 +1,11 @@
+[Unit]
+Description=Streamlit Service
+After=network.target
+
+[Service]
+User=ec2-user
+WorkingDirectory=/home/ec2-user/students-performance
+ExecStart=venv/bin/streamlit run /home/ec2-user/students-performance/student_performance_app/main.py
+
+[Install]
+WantedBy=multi-user.target
