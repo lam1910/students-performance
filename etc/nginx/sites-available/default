@@ -1,0 +1,10 @@
+server {
+    listen 80;
+    server_name EC2 IP; # Replace with your EC2's public IP 
+
+    location / {
+        proxy_pass http://127.0.0.1:8501;  # Replace the port number with your Streamlit's port
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+}
